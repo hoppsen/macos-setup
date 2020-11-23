@@ -30,7 +30,8 @@ Start from step 2 of the [installation](#installation) process.
 
 ## Manual steps
 
-* [ ] Create SSH key and add public key to GitHub, etc.
+* [ ] Enable `Full Disk Access` for `iTerm.app`
+* [ ] Create SSH key and add public key to `GitHub`, etc.
 * [ ] Copy over large files (Final Cut library, Raw photo files, etc.)
 
 ## Inspired by:

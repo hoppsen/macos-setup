@@ -30,6 +30,16 @@ git pull origin master
 git submodule update --init --recursive
 git submodule foreach git pull origin master
 
+# Read the initial macOS defaults for later comparison
+header defaults
+if [ ! -d 'defaults' ]; then
+  printf '\e[1;92mStoring macOS defaults\e[m\n'
+  mkdir defaults
+  defaults read > defaults/macos
+else
+  printf '\e[1;93mmacOS defaults already existing\e[m\n'
+fi
+
 # --------------------------------------------------------------------
 
 # Install all software not bundled in homebrew
@@ -71,6 +81,15 @@ if ask_question 'Do you want to synchronize .dotfiles?'; then
   printf '\e[1;Synchronizing dotfiles\e[m\n'
   rsync -av --no-perms --exclude="LICENSE" --exclude="README.md" --exclude=".git" ./dotfiles/ ~
   source ~/.zshrc
+fi
+
+# --------------------------------------------------------------------
+
+# Read the current defaults into a file
+header current_defaults
+if ask_question 'Do you want to store the current defaults?'; then
+  printf '\e[1;92mStoring current defaults\e[m\n'
+  defaults read > defaults/current
 fi
 
 # --------------------------------------------------------------------

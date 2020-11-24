@@ -167,7 +167,7 @@ defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 
 # Finder > Preferences > General > CDs, DVDs and iPods
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
 # Finder > Preferences > General > Connected servers
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool true

@@ -958,7 +958,6 @@
 	<array>
 		<string>MesloLGS NF</string>
 		<string>Menlo</string>
-		<string>Monaco</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>

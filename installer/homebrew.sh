@@ -13,16 +13,15 @@ fi
 
 printf '\e[1;92mInstalling homebrew\e[m\n'
 
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Make sure we’re using the latest Homebrew
 brew update
-brew upgrade --all
+brew upgrade
 
 # Install Brew cask for standalone software installations
-brew tap caskroom/cask
-brew install brew-cask
-brew tap caskroom/versions
+brew tap homebrew/cask
+brew tap homebrew/cask-versions
 
 # Be able to use the Brewfile to install all software
 # see https://github.com/Homebrew/homebrew-bundle

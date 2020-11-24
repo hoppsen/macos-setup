@@ -20,12 +20,12 @@ function header() {
   printf '\n\e[m'
 }
 
-# Get the dotfiles directory's absolute path
-DOTFILES_DIR="$(cd "$(dirname "$0")"; pwd -P)"
+# Get the directory's absolute path
+ABSOLUTE_DIR="$(cd "$(dirname "$0")"; pwd -P)"
 
 # Pull latest changes from GitHub
 header check_for_updates
-cd $DOTFILES_DIR
+cd $ABSOLUTE_DIR
 git pull origin master
 git submodule update --init --recursive
 git submodule foreach git pull origin master

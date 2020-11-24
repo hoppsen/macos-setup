@@ -14,10 +14,6 @@ Furthermore, I hope that you will use it as an inspiration or even a starting po
     ```bash
     git clone https://github.com/hoppsen/macos-setup.git ~/.macos-setup
     ```
-    alternatively via SSH:
-    ```bash
-    git clone git@github.com:hoppsen/macos-setup.git ~/.macos-setup
-    ```
 2. Navigate to the folder and run `setup.sh`
     ```bash
     cd ~/.macos-setup

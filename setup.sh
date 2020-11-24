@@ -58,6 +58,7 @@ fi
 header homebrew
 if ask_question 'Do you want to install homebrew software?'; then
   printf '\e[1;92mInstalling brews\e[m\n'
+  printf '\e[91mEnsure you are logged into the Mac App Store. Press enter to continue ...\e[m\n'; read -s -p $''
   brew bundle
 fi
 
@@ -97,7 +98,7 @@ fi
 # Now ask for a reboot, which is highly recommended after installing and configuring everything
 header reboot
 if ask_question 'Do you want to reboot your computer now?'; then
-  printf '\e[91mRebooting ...\e[m'
+  printf '\e[91mRebooting ...\e[m\n'
   sudo reboot
   exit 0
 fi

@@ -7,7 +7,7 @@ cask_args appdir: "/Applications"
 ######################################################################
 
 brew "mas"
-brew "imagemagick"
+# brew "imagemagick"
 # brew "swiftformat"
 # brew "swiftlint"
 
@@ -74,8 +74,8 @@ cask "quicklook-json"
 # Productivity                                                       #
 ######################################################################
 
-cask "monitorcontrol"
 cask "appcleaner"
+# cask "monitorcontrol"
 # cask "alfred"
 # cask "bettertouchtool"
 # cask "eul"

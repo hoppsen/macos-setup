@@ -117,6 +117,9 @@ defaults write -globalDomain com.apple.trackpad.scaling 3
 ### System Preferences > Mouse ###
 ##################################
 
+# System Preferences > Mouse > Secondary click
+defaults write com.apple.AppleMultitouchMouse MouseButtonMode TwoButton
+
 # System Preferences > Mouse > Tracking Speed (The maximum mouse speed you can access from the System Preferences is 3.0)
 defaults write -globalDomain com.apple.mouse.scaling 5
 
@@ -133,10 +136,8 @@ for app in 'file:///System/Applications/Launchpad.app/' \
             'file:///Applications/Safari.app/' \
             'file:///System/Applications/Messages.app/' \
             'file:///Applications/WhatsApp.app/' \
-            'file:///Applications/Microsoft%20Teams.app/' \
             'file:///System/Applications/Notes.app/' \
             'file:///System/Applications/Reminders.app/' \
-            'file:///Applications/Microsoft%20Outlook.app/' \
             'file:///System/Applications/Mail.app/' \
             'file:///System/Applications/Calendar.app/' \
             'file:///Applications/Developer.app/' \
@@ -150,8 +151,7 @@ for app in 'file:///System/Applications/Launchpad.app/' \
             'file:///Applications/Affinity%20Publisher.app/' \
             'file:///Applications/Spotify.app/' \
             'file:///System/Applications/System%20Preferences.app/' \
-            'file:///Applications/iTerm.app/' \
-            'file:///Applications/Cisco/Cisco%20AnyConnect%20Secure%20Mobility%20Client.app/'
+            'file:///Applications/iTerm.app/'
 do
     defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>${app}</string><key>_CFURLStringType</key><integer>15</integer></dict></dict></dict>"
 done

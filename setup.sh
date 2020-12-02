@@ -59,7 +59,7 @@ header homebrew
 if ask_question 'Do you want to install homebrew software?'; then
   printf '\e[1;92mInstalling brews\e[m\n'
   printf '\e[91mEnsure you are logged into the Mac App Store. Consider installing Xcode manually. Press enter to continue ...\e[m\n'; read -s -p $''
-  brew bundle
+  arch -x86_64 brew bundle
 fi
 
 # --------------------------------------------------------------------

@@ -13,7 +13,14 @@ fi
 
 printf '\e[1;92mInstalling homebrew\e[m\n'
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+# Workaround for ARM Macs
+arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# sudo mkdir -p /opt/homebrew
+# sudo chown -R $(whoami):staff /opt/homebrew
+# cd /opt
+# curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 
 # Make sure we’re using the latest Homebrew
 brew update

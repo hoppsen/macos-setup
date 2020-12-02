@@ -231,8 +231,27 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 ### Xcode ###
 #############
 
-# TODO: Use the initial setup to determine the changes needed
-defaults read com.apple.dt.Xcode > defaults/xcode
+# Xcode -> Preferences -> Navigation > Command-click on Code
+defaults write com.apple.dt.Xcode IDECommandClickOnCodeAction -bool true
+
+# Xcode -> Preferences -> Navigation > Navigation
+defaults write com.apple.dt.Xcode IDEEditorCoordinatorTarget_Click2 Default
+
+# Xcode -> Preferences -> Text Editing > Display > Code folding ribbon
+defaults write com.apple.dt.Xcode DVTTextShowFoldingSidebar -bool true
+
+# Xcode -> Preferences -> Text Editing > Display > Page guide at column
+defaults write com.apple.dt.Xcode DVTTextShowPageGuide -bool true
+defaults write com.apple.dt.Xcode DVTTextPageGuideLocation -int 160
+
+# Xcode -> Preferences -> Text Editing > Editing > Including whitespace-only lines
+defaults write com.apple.dt.Xcode DVTTextEditorTrimWhitespaceOnlyLines -bool true
+
+# Xcode -> Preferences -> Text Editing > Indentation > Re-Indent on paste
+defaults write com.apple.dt.Xcode DVTTextIndentOnPaste -bool true
+
+# Xcode -> Preferences -> Text Editing > Indentation > Align consecutive // comments
+defaults write com.apple.dt.Xcode DVTTextAlignConsecutiveSlashSlashComments -bool true
 
 ##########################
 ### Kill affected apps ###

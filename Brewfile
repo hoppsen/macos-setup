@@ -92,7 +92,7 @@ cask "appcleaner"
 # Personal                                                           #
 ######################################################################
 
-cask "spotify"
-cask "discord"
-cask "autodesk-fusion360"
+cask "spotify" if ENV["USER"] == "hoppsen"
+cask "discord" if ENV["USER"] == "hoppsen"
+cask "autodesk-fusion360" if ENV["USER"] == "hoppsen"
 # cask "lightburn" # cask missing

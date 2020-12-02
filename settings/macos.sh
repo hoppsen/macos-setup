@@ -117,6 +117,9 @@ defaults write -globalDomain com.apple.trackpad.scaling 3
 ### System Preferences > Mouse ###
 ##################################
 
+# System Preferences > Mouse > Secondary click
+defaults write com.apple.AppleMultitouchMouse MouseButtonMode TwoButton
+
 # System Preferences > Mouse > Tracking Speed (The maximum mouse speed you can access from the System Preferences is 3.0)
 defaults write -globalDomain com.apple.mouse.scaling 5
 
@@ -133,10 +136,8 @@ for app in 'file:///System/Applications/Launchpad.app/' \
             'file:///Applications/Safari.app/' \
             'file:///System/Applications/Messages.app/' \
             'file:///Applications/WhatsApp.app/' \
-            'file:///Applications/Microsoft%20Teams.app/' \
             'file:///System/Applications/Notes.app/' \
             'file:///System/Applications/Reminders.app/' \
-            'file:///Applications/Microsoft%20Outlook.app/' \
             'file:///System/Applications/Mail.app/' \
             'file:///System/Applications/Calendar.app/' \
             'file:///Applications/Developer.app/' \
@@ -150,8 +151,7 @@ for app in 'file:///System/Applications/Launchpad.app/' \
             'file:///Applications/Affinity%20Publisher.app/' \
             'file:///Applications/Spotify.app/' \
             'file:///System/Applications/System%20Preferences.app/' \
-            'file:///Applications/iTerm.app/' \
-            'file:///Applications/Cisco/Cisco%20AnyConnect%20Secure%20Mobility%20Client.app/'
+            'file:///Applications/iTerm.app/'
 do
     defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>${app}</string><key>_CFURLStringType</key><integer>15</integer></dict></dict></dict>"
 done
@@ -204,7 +204,8 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Desktop > Show View Options
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:GroupBy Kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Delete :DesktopViewSettings:GroupBy" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Add :DesktopViewSettings:GroupBy string Kind" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy dateAdded" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 100" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 72" ~/Library/Preferences/com.apple.finder.plist
@@ -230,8 +231,27 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 ### Xcode ###
 #############
 
-# TODO: Use the initial setup to determine the changes needed
-defaults read com.apple.dt.Xcode > defaults/xcode
+# Xcode -> Preferences -> Navigation > Command-click on Code
+defaults write com.apple.dt.Xcode IDECommandClickOnCodeAction -bool true
+
+# Xcode -> Preferences -> Navigation > Navigation
+defaults write com.apple.dt.Xcode IDEEditorCoordinatorTarget_Click2 Default
+
+# Xcode -> Preferences -> Text Editing > Display > Code folding ribbon
+defaults write com.apple.dt.Xcode DVTTextShowFoldingSidebar -bool true
+
+# Xcode -> Preferences -> Text Editing > Display > Page guide at column
+defaults write com.apple.dt.Xcode DVTTextShowPageGuide -bool true
+defaults write com.apple.dt.Xcode DVTTextPageGuideLocation -int 160
+
+# Xcode -> Preferences -> Text Editing > Editing > Including whitespace-only lines
+defaults write com.apple.dt.Xcode DVTTextEditorTrimWhitespaceOnlyLines -bool true
+
+# Xcode -> Preferences -> Text Editing > Indentation > Re-Indent on paste
+defaults write com.apple.dt.Xcode DVTTextIndentOnPaste -bool true
+
+# Xcode -> Preferences -> Text Editing > Indentation > Align consecutive // comments
+defaults write com.apple.dt.Xcode DVTTextAlignConsecutiveSlashSlashComments -bool true
 
 ##########################
 ### Kill affected apps ###

@@ -28,6 +28,7 @@ Start from step 2 of the [installation](#installation) process.
 
 * [ ] Enable `Accessibility` for `Divvy.app` and `iTerm.app`
 * [ ] Enable `Full Disk Access` for `iTerm.app`
+* [ ] Disable Siri and remove from TouchBar
 * [ ] Create SSH key and add public key to `GitHub`, etc.
 * [ ] Copy `Motion Templates` from cloud storage
 * [ ] Setup `/etc/hosts` using [someonewhocares.org/hosts](https://someonewhocares.org/hosts/)

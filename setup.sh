@@ -58,8 +58,8 @@ fi
 header homebrew
 if ask_question 'Do you want to install homebrew software?'; then
   printf '\e[1;92mInstalling brews\e[m\n'
-  printf '\e[91mEnsure you are logged into the Mac App Store. Consider installing Xcode manually. Press enter to continue ...\e[m\n'; read -s -p $''
-  brew bundle
+  printf '\e[1;91mEnsure you are logged into the Mac App Store. Consider installing Xcode manually. Press enter to continue ...\e[m\n'; read -s -p $''
+  arch -x86_64 brew bundle
 fi
 
 # --------------------------------------------------------------------
@@ -67,7 +67,7 @@ fi
 # Install application settings
 header settings
 if ask_question 'Do you want to install application and macOS settings?'; then
-  printf '\e[1;Applying settings\e[m\n'
+  printf '\e[1;92mApplying settings\e[m\n'
   for s in ./settings/*; do
     echo "Apply settings from '$s':"
     sh $s
@@ -79,9 +79,18 @@ fi
 # Synchronize .dotfiles from repository
 header dotfiles
 if ask_question 'Do you want to synchronize .dotfiles?'; then
-  printf '\e[1;Synchronizing dotfiles\e[m\n'
+  printf '\e[1;92mSynchronizing dotfiles\e[m\n'
   rsync -av --no-perms --exclude="LICENSE" --exclude="README.md" --exclude=".git" ./dotfiles/ ~
   source ~/.zshrc
+fi
+
+# --------------------------------------------------------------------
+
+# Copy hosts file over to /etc/hosts
+header etc_hosts
+if ask_question 'Do you want to overwrite the hosts?'; then
+  printf '\e[1;92mOverwriting hosts\e[m\n'
+  sudo cp hosts /etc/hosts
 fi
 
 # --------------------------------------------------------------------
@@ -98,7 +107,7 @@ fi
 # Now ask for a reboot, which is highly recommended after installing and configuring everything
 header reboot
 if ask_question 'Do you want to reboot your computer now?'; then
-  printf '\e[91mRebooting ...\e[m\n'
+  printf '\e[1;91mRebooting ...\e[m\n'
   sudo reboot
   exit 0
 fi

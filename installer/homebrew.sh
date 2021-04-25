@@ -13,7 +13,7 @@ fi
 
 printf '\e[1;92mInstalling homebrew\e[m\n'
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Make sure we’re using the latest Homebrew
 brew update

@@ -46,6 +46,7 @@ mas "Xcode", id: 497799835
 cask "visual-studio-code"
 cask "iterm2"
 cask "charles"
+cask "postman"
 cask "sublime-merge"
 cask "sf-symbols"
 cask "contraste"

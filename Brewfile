@@ -52,6 +52,7 @@ cask "sf-symbols"
 cask "contraste"
 cask "imageoptim"
 cask "google-chrome"
+cask "xcodes"
 # cask "tower"
 
 ######################################################################

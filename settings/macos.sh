@@ -136,6 +136,8 @@ for app in 'file:///System/Applications/Launchpad.app/' \
             'file:///Applications/Safari.app/' \
             'file:///System/Applications/Messages.app/' \
             'file:///Applications/WhatsApp.app/' \
+            'file:///Applications/Tweetbot.app/' \
+            'file:///Applications/Slack.app/' \
             'file:///System/Applications/Notes.app/' \
             'file:///System/Applications/Reminders.app/' \
             'file:///System/Applications/Mail.app/' \
@@ -149,7 +151,7 @@ for app in 'file:///System/Applications/Launchpad.app/' \
             'file:///Applications/Affinity%20Photo.app/' \
             'file:///Applications/Affinity%20Designer.app/' \
             'file:///Applications/Affinity%20Publisher.app/' \
-            'file:///Applications/Spotify.app/' \
+            'file:///Applications/Music.app/' \
             'file:///System/Applications/System%20Preferences.app/' \
             'file:///Applications/iTerm.app/'
 do

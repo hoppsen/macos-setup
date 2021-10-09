@@ -21,6 +21,8 @@ mas "Adaptivity", id: 1054670022
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Affinity Publisher", id: 881418622
+mas "Bakery - Simple Icon Creator", id: 1575220747
+mas "Custom Symbols", id: 1566662030
 mas "Developer", id: 640199958
 mas "Divvy", id: 413857545
 mas "Final Cut Pro", id: 424389933
@@ -28,6 +30,7 @@ mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "ToothFairy", id: 1191449274
+mas "Tweetbot 3 for Twitter", id: 1384080005
 mas "Tyme 2", id: 1063996724
 mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
@@ -40,15 +43,22 @@ mas "Xcode", id: 497799835
 # mas "Microsoft Remote Desktop", id: 1295203466
 
 ######################################################################
+# Communication                                                      #
+######################################################################
+
+cask "discord"
+cask "slack"
+
+######################################################################
 # Development                                                        #
 ######################################################################
 
 cask "visual-studio-code"
 cask "iterm2"
-cask "charles"
-cask "postman"
+cask "proxyman"
 cask "sublime-merge"
 cask "sf-symbols"
+cask "figma"
 cask "contraste"
 cask "imageoptim"
 cask "google-chrome"
@@ -63,9 +73,9 @@ cask "xcodes"
 cask "provisionql"
 cask "quicklook-csv"
 cask "quicklook-json"
+cask "qlmarkdown"
 #cask "qlcolorcode"
 #cask "qlstephen"
-#cask "qlmarkdown"
 #cask "qlprettypatch"
 #cask "betterzipql"
 #cask "qlimagesize"
@@ -94,7 +104,6 @@ cask "appcleaner"
 # Personal                                                           #
 ######################################################################
 
-cask "spotify" if ENV["USER"] == "hoppsen"
-cask "discord" if ENV["USER"] == "hoppsen"
 cask "autodesk-fusion360" if ENV["USER"] == "hoppsen"
-# cask "lightburn" # cask missing
+cask "binance" if ENV["USER"] == "hoppsen"
+# cask "lightburn" # cask missing if ENV["USER"] == "hoppsen"

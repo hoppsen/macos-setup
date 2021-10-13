@@ -138,6 +138,7 @@ for app in 'file:///System/Applications/Launchpad.app/' \
             'file:///Applications/WhatsApp.app/' \
             'file:///Applications/Tweetbot.app/' \
             'file:///Applications/Slack.app/' \
+            'file:///Applications/Discord.app/' \
             'file:///System/Applications/Notes.app/' \
             'file:///System/Applications/Reminders.app/' \
             'file:///System/Applications/Mail.app/' \
@@ -147,7 +148,6 @@ for app in 'file:///System/Applications/Launchpad.app/' \
             'file:///Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/' \
             'file:///Applications/Visual%20Studio%20Code.app/' \
             'file:///Applications/Sublime%20Merge.app/' \
-            'file:///System/Applications/Home.app/' \
             'file:///Applications/Affinity%20Photo.app/' \
             'file:///Applications/Affinity%20Designer.app/' \
             'file:///Applications/Affinity%20Publisher.app/' \

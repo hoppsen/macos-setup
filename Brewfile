@@ -29,7 +29,6 @@ mas "Final Cut Pro", id: 424389933
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "ToothFairy", id: 1191449274
 mas "Tweetbot 3 for Twitter", id: 1384080005
 mas "Tyme 2", id: 1063996724
 mas "WhatsApp", id: 1147396723
@@ -41,6 +40,7 @@ mas "Xcode", id: 497799835
 # mas "GIF Brewery 3", id: 1081413713
 # mas "Grammarly for Safari", id: 1462114288
 # mas "Microsoft Remote Desktop", id: 1295203466
+# mas "ToothFairy", id: 1191449274
 
 ######################################################################
 # Communication                                                      #

@@ -11,10 +11,13 @@ Furthermore, I hope that you will use it as an inspiration or even a starting po
 > :warning: **WARNING!** Don't use this setup process blindly, unless you know what that entails. I would suggest to review the code, maybe even fork and adapt to your own needs. But definitely backup your existing files before installing.
 
 1. Checkout the Git repository
+
     ```bash
     git clone https://github.com/hoppsen/macos-setup.git ~/.macos-setup
     ```
+
 2. Navigate to the folder and run `setup.sh`
+
     ```bash
     cd ~/.macos-setup
     sh setup.sh
@@ -28,6 +31,7 @@ Start from step 2 of the [installation](#installation) process.
 
 * [ ] Enable `Accessibility` for `Divvy.app` and `iTerm.app`
 * [ ] Enable `Full Disk Access` for `iTerm.app`
+* [ ] Install another ruby version, e.g. `rbenv install 2.7.4 && rbenv global 2.7.4`
 * [ ] Disable Siri and remove from TouchBar
 * [ ] Create SSH key and add public key to `GitHub`, etc.
 * [ ] Copy `Motion Templates` from cloud storage

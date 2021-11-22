@@ -7,9 +7,10 @@ cask_args appdir: "/Applications"
 ######################################################################
 
 brew "mas"
+brew "rbenv"
+brew "swiftformat"
+brew "swiftlint"
 # brew "imagemagick"
-# brew "swiftformat"
-# brew "swiftlint"
 
 ######################################################################
 # App-Store apps via "mas"                                           #

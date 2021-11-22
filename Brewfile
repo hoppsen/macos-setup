@@ -30,6 +30,7 @@ mas "Final Cut Pro", id: 424389933
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "RocketSim for Xcode", id: 1504940162
 mas "Tweetbot 3 for Twitter", id: 1384080005
 mas "Tyme 2", id: 1063996724
 mas "WhatsApp", id: 1147396723

@@ -136,9 +136,10 @@ for app in 'file:///System/Applications/Launchpad.app/' \
             'file:///Applications/Safari.app/' \
             'file:///System/Applications/Messages.app/' \
             'file:///Applications/WhatsApp.app/' \
-            'file:///Applications/Tweetbot.app/' \
+            'file:///Applications/WhatsApp%202.app/' \
             'file:///Applications/Slack.app/' \
             'file:///Applications/Discord.app/' \
+            'file:///Applications/Elgato%20Wave%20Link.app/' \
             'file:///System/Applications/Notes.app/' \
             'file:///System/Applications/Reminders.app/' \
             'file:///System/Applications/Mail.app/' \
@@ -148,12 +149,10 @@ for app in 'file:///System/Applications/Launchpad.app/' \
             'file:///Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/' \
             'file:///Applications/Visual%20Studio%20Code.app/' \
             'file:///Applications/Sublime%20Merge.app/' \
-            'file:///Applications/Affinity%20Photo.app/' \
-            'file:///Applications/Affinity%20Designer.app/' \
-            'file:///Applications/Affinity%20Publisher.app/' \
             'file:///Applications/Music.app/' \
             'file:///System/Applications/System%20Preferences.app/' \
-            'file:///Applications/iTerm.app/'
+            'file:///Applications/iTerm.app/' \
+            'file:///Applications/MacGPT.app/'
 do
     defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>${app}</string><key>_CFURLStringType</key><integer>15</integer></dict></dict></dict>"
 done

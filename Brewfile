@@ -8,9 +8,14 @@ cask_args appdir: "/Applications"
 
 brew "mas"
 brew "rbenv"
+brew "ruby"
+brew "mint"
 brew "swiftformat"
 brew "swiftlint"
-# brew "imagemagick"
+brew "openssl"
+brew "openapi-generator"
+brew "jupyterlab" # Interactive Environment
+# brew "imagemagick"	
 
 ######################################################################
 # App-Store apps via "mas"                                           #
@@ -31,11 +36,15 @@ mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "RocketSim for Xcode", id: 1504940162
-mas "Tweetbot 3 for Twitter", id: 1384080005
-mas "Tyme 2", id: 1063996724
 mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
+mas "AppDab", id: 1612325183
+mas "Desk Remote Control", id: 1509037746
+mas "MoneyMoney", id: 872698314
+mas "Speedtest by Ookla", id: 1153157709
 # mas "Asset Catalog Creator Pro", id: 809625456
+# mas "Tweetbot 3 for Twitter", id: 1384080005
+# mas "Tyme 2", id: 1063996724
 # mas "1Password", id: 443987910
 # mas "Apple Configurator 2", id: 1037126344
 # mas "ForkLift", id: 412448059
@@ -50,6 +59,10 @@ mas "Xcode", id: 497799835
 
 cask "discord"
 cask "slack"
+cask "elgato-camera-hub"
+cask "elgato-control-center"
+cask "elgato-stream-deck"
+cask "elgato-wave-link"
 
 ######################################################################
 # Development                                                        #
@@ -64,7 +77,11 @@ cask "figma"
 cask "contraste"
 cask "imageoptim"
 cask "google-chrome"
-cask "xcodes"
+cask "periphery"
+cask "postman"
+cask "linear-linear"
+cask "jupyterlab" # Desktop App
+# cask "xcodes"
 # cask "tower"
 
 ######################################################################
@@ -76,7 +93,7 @@ cask "provisionql"
 cask "quicklook-csv"
 cask "quicklook-json"
 cask "qlmarkdown"
-#cask "qlcolorcode"
+cask "qlcolorcode"
 #cask "qlstephen"
 #cask "qlprettypatch"
 #cask "betterzipql"
@@ -89,6 +106,8 @@ cask "qlmarkdown"
 ######################################################################
 
 cask "appcleaner"
+cask "raspberry-pi-imager"
+# cask "notion"
 # cask "monitorcontrol"
 # cask "alfred"
 # cask "bettertouchtool"
@@ -98,6 +117,7 @@ cask "appcleaner"
 # Privacy                                                            #
 ######################################################################
 
+# cask "protonvpn"
 # cask "expressvpn"
 # cask "little-snitch"
 # cask "micro-snitch"
@@ -107,5 +127,6 @@ cask "appcleaner"
 ######################################################################
 
 cask "autodesk-fusion360" if ENV["USER"] == "hoppsen"
+cask "prusaslicer" if ENV["USER"] == "hoppsen"
 cask "binance" if ENV["USER"] == "hoppsen"
 # cask "lightburn" # cask missing if ENV["USER"] == "hoppsen"
